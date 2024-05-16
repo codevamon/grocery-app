@@ -1,0 +1,30 @@
+<nav class="navbar bg-light border-bottom navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <%= link_to(root_path, class: "navbar-brand nav-link") do %>
+      <%= image_tag("icon.png", class: "img-fluid", height: "48", width: "48") %>
+    <% end %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <%= link_to 'About Us', home_about_path, class:"nav-link" %>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Groceries
+          </a>
+          <ul class="dropdown-menu">
+            <li><%= link_to 'View Groceries', groceries_path, class:"dropdown-item" %></li>
+            <li><%= link_to 'Add Grocery', new_grocery_path, class:"dropdown-item" %></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
